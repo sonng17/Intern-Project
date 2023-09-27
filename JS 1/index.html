@@ -1,0 +1,529 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Required meta tags -->
+
+    <title>Corot - Coronavirus Data Traker Admin Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="http://demo.riktheme.com/cotrak/new-theme/img/core-img/favicon.png">
+
+    <!-- Plugins css -->
+    <link href="http://demo.riktheme.com/cotrak/new-theme/assets/css/jqvmap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://demo.riktheme.com/cotrak/new-theme/css/default-assets/jquery.jConveyorTicker.min.css">
+    <link href="http://demo.riktheme.com/cotrak/new-theme/assets/css/datatables.min.css" rel="stylesheet" />
+    <link href="http://demo.riktheme.com/cotrak/new-theme/assets/css/select2.min.css" rel="stylesheet" />
+
+    <!-- Master Stylesheet CSS -->
+    <link rel="stylesheet" href="http://demo.riktheme.com/cotrak/new-theme/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="loader-animation-outer">
+                <div class="rotate-center">
+                    <div class="scale-up-center">
+                        <img src="http://demo.riktheme.com/cotrak/new-theme/img/core-img/corona.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader -->
+
+    <!-- ======================================
+    ******* Main Page Wrapper Area **********
+    ======================================= -->
+    <div class="page-wrapper">
+        <div class="horizontal-menu">
+            <nav class="navbar top-navbar col-lg-12 col-12 p-0">
+                <div class="container-fluid">
+                    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
+                        <a class="navbar-brand brand-logo" href="index.html"><img src="http://demo.riktheme.com/cotrak/new-theme/img/core-img/logo.png" alt="logo" /></a>
+                        <a class="navbar-brand brand-logo-mini" href="index.html"><img src="http://demo.riktheme.com/cotrak/new-theme/img/core-img/small-logo.png" alt="logo" /></a>
+                    </div>
+                    <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+                        <ul class="navbar-nav navbar-nav-right">
+                            <li class="nav-item dropdown">
+
+                            </li>
+                        </ul>
+                        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="horizontal-menu-toggle">
+                            <span class="ti-menu"></span>
+                        </button>
+                    </div>
+                    <div class="preheader-area d-none d-lg-block">
+                        <div class="preheader-content-wrap d-flex align-items-center">
+                            <h6 class="mb-0 mr-4 text-white">Help ( Poor people) and donet us</h6>
+                            <a href="#" class="btn btn-default">Donet</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="bottom-navbar">
+                <div class="container-fluid">
+                    <ul class="nav page-navigation">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="bx bx-home-heart menu-icon"></i>
+                                <span class="menu-title">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bx bx-news menu-icon"></i>
+                                <span class="menu-title">News</span>
+                                <i class='bx bx-chevron-down'></i>
+                            </a>
+                            <div class="submenu">
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="news.html">News</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="news-details.html">News Details</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="symptons.html">
+                                <i class="bx bx-certification menu-icon"></i>
+                                <span class="menu-title">Symptons</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="apex-chart.html">
+                                <i class="bx bx-bar-chart-square menu-icon"></i>
+                                <span class="menu-title">Chart</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bx bx-map menu-icon"></i>
+                                <span class="menu-title">Maps</span>
+                                <i class='bx bx-chevron-down'></i>
+                            <div class="submenu">
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="map-world.html">World Map</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="map-africa.html">Africa Map</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="map-australia.html">Australia Map</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="map-usa.html">USA Map</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="map-uk.html">UK Map</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="map-india.html">India Map</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <i class="bx bx-user-circle menu-icon"></i>
+                                <span class="menu-title">Special Page</span>
+                                <i class='bx bx-chevron-down'></i>
+                            <div class="submenu">
+                                <ul class="submenu-item">
+                                    <li class="nav-item"><a class="nav-link" href="coming-soon.html">Coming soon</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="404.html">404</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main Page Area -->
+        <div class="main-page-content">
+            <div class="dashboard-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center mb-30">
+                        <div class="col-12">
+                            <div class="page-title-box d-flex align-items-center justify-content-between">
+                                <h4 class="mb-2 font-20">COVID-19 Coronavirus Tracker</h4>
+                            </div>
+                            <div class="dashboard-infor-mation">
+                                <div class="dashboard-clock d-flex flex-wrap align-items-center">
+                                    <div id="dashboardDate"></div> <span class="ml-1"> : </span>
+                                    <ul class="d-flex align-items-center justify-content-end ml-2">
+                                        <li id="hours"></li>
+                                        <li>:</li>
+                                        <li id="min"></li>
+                                        <li>:</li>
+                                        <li id="sec"></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="currency-marquee-area js-conveyor-1 mb-30">
+                                <ul class="bg-gradient-dark">
+                                    <li>Today death - 15,056, Today Cases - 33,456</li>
+                                    <li>Vaccines and diseases.</li>
+                                    <li>Concerns over reuse of protective medical kit.</li>
+                                    <li>WHO policy recommendations.</li>
+                                    <li>National programmes and systems.</li>
+                                    <li>Monitoring and surveillance, Quality, safety and standards.</li>
+                                    <li>During this challenging period, the Measles &amp; Rubella Initiative (M&amp;RI) expresses solidarity with families, communities, governments and emergency responders and joins.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-7 box-margin">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="country-map">
+                                        <div class="box-header">
+                                            <h5 class="card-title">Cases by Country</h5>
+                                        </div>
+
+                                        <div class="map--body">
+                                            <div class="map-status-wrap" id="map-status-report">
+                                                <div class="map-status" id="map-status"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Category -->
+                        <div class="col-lg-5">
+                            <div class="row worldwide-stats">
+                                <div class="col-md-6">
+                                    <div class="card mb-30 bg-primary">
+                                        <div class="card-body">
+                                            <div class="tracker-block__icon">
+                                                <img src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/1.png" alt="icon" />
+                                            </div>
+                                            <div class="corona-count-content">
+                                                <h4 class="text-white">Coronavirus Cases</h4>
+                                                <h2 class="text-white"><span class="cases-no infected">0,000,000</span>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card mb-30 bg-success">
+                                        <div class="card-body">
+                                            <div class="tracker-block__icon">
+                                                <img src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/4.png" alt="icon" />
+                                            </div>
+                                            <div class="corona-count-content">
+                                                <h4 class="text-white">Total Recovered</h4>
+                                                <h2 class="text-white"><span class="cases-no recovered">0,000,000</span>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card mb-30 bg-danger">
+                                        <div class="card-body">
+                                            <div class="tracker-block__icon">
+                                                <img src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/2.png" alt="icon" />
+                                            </div>
+                                            <div class="corona-count-content">
+                                                <h4 class="text-white">Total Death</h4>
+                                                <h2 class="text-white"><span class="cases-no deaths">0,000,000</span>
+                                                </h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="card mb-30 bg-warning">
+                                        <div class="card-body">
+                                            <div class="tracker-block__icon">
+                                                <img src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/3.png" alt="icon" />
+                                            </div>
+                                            <div class="corona-count-content">
+                                                <h4 class="text-white">Active Cases</h4>
+                                                <h2 class="text-white"><span class="cases-no current_cases">0,000,000</span></h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 box-margin">
+                            <div class="card code-table">
+                                <div class="card-body pb-0">
+                                    <div class="card-header border-none bg-transparent d-flex align-items-center justify-content-between p-0 mb-30">
+                                        <div class="widgets-card-title">
+                                            <h5 class="card-title mb-0">Most Affected Countries</h5>
+                                        </div>
+                                    </div>
+
+                                    <!-- Table -->
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-nowrap">
+                                            <thead>
+                                                <tr>
+                                                    <th>Country</th>
+                                                    <th>Confirmed</th>
+                                                    <th>Today Cases</th>
+                                                    <th>Recovered</th>
+                                                    <th>Today Deaths</th>
+                                                    <th>Deaths</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/5.png" alt=""><span>USA</span>
+                                                    </td>
+                                                    <td>
+                                                        108,161
+                                                    </td>
+                                                    <td>
+                                                        2,48,538
+                                                    </td>
+                                                    <td>
+                                                        18,538
+                                                    </td>
+                                                    <td>
+                                                        78,538
+                                                    </td>
+                                                    <td>
+                                                        1,14722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/6.png" alt=""><span>Italy</span>
+                                                    </td>
+                                                    <td>
+                                                        72,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/7.png" alt=""><span>China</span>
+                                                    </td>
+                                                    <td>
+                                                        12,4161
+                                                    </td>
+                                                    <td>
+                                                        7,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/8.png" alt=""><span>Spain</span>
+                                                    </td>
+                                                    <td>
+                                                        108,161
+                                                    </td>
+                                                    <td>
+                                                        1,2538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        4,722
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/9.png" alt=""><span>Germa</span>
+                                                    </td>
+                                                    <td>
+                                                        7,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <img class="chat-img mr-2" src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/10.jpg" alt=""><span>Iran</span>
+                                                    </td>
+                                                    <td>
+                                                        8,161
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        9,538
+                                                    </td>
+                                                    <td>
+                                                        8,538
+                                                    </td>
+                                                    <td>
+                                                        2,722
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6 box-margin height-card">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="single-news-card mb-30">
+                                                <h5>Concerns over reuse of protective medical kit</h5>
+                                                <!-- Single Card -->
+                                                <div class="single-card-content d-sm-flex align-items-center">
+                                                    <div class="image-area mb-20-xs">
+                                                        <img src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/15.jpg" alt="">
+                                                    </div>
+                                                    <div class="content-text">
+                                                        <p>One union official says a change in guidance could see front-line medics withdraw from duties. Consectetur adipisicing elit. Cumque perspiciatis soluta minima.</p>
+                                                        <a href="news-details.html" target="_blank">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="single-news-card">
+                                                <h5>Early prison release scheme suspended after errors</h5>
+                                                <!-- Single Card -->
+                                                <div class="single-card-content d-sm-flex align-items-center">
+                                                    <div class="image-area mb-20-xs">
+                                                        <img src="http://demo.riktheme.com/cotrak/new-theme/img/bg-img/19.jpg" alt="">
+                                                    </div>
+                                                    <div class="content-text">
+                                                        <p>One union official says a change in guidance could see front-line medics. Ipsum dolor sit amet, consectetur adipisicing elit. Facilis, quas.</p>
+                                                        <a href="news-details.html" target="_blank">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Area -->
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Footer Area -->
+                        <footer class="footer-area d-sm-flex justify-content-center align-items-center justify-content-between">
+                            <!-- Copywrite Text -->
+                            <div class="copywrite-text">
+                                <p class="font-13">Created by @<a href="#">Theme-zome.</a></p>
+                            </div>
+                            <div class="fotter-icon text-center">
+                                <p class="mb-0 font-13">2020 @ Corot. </p>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================
+    ********* Main Page Wrapper Area ***********
+    ======================================= -->
+
+    <!-- Plugins js -->
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/jquery.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/popper.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/bootstrap.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/bundle.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/default-assets/setting.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/default-assets/date-time.js"></script>
+
+    <!-- Active JS -->
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/default-assets/active.js"></script>
+
+    <!-- Inject JS -->
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/default-assets/apexchart.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/default-assets/dashboard-active.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/script.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/js/default-assets/jquery.jConveyorTicker.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/assets/js/select2.full.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/assets/js/datatables.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/assets/js/jquery.vmap.min.js"></script>
+    <script src="http://demo.riktheme.com/cotrak/new-theme/assets/js/jquery.vmap.world.js"></script>
+
+    <!--=== APP Js ===-->
+    <script src="./app.js"></script>
+    <!--=== Active Js ===-->
+    <script src="http://demo.riktheme.com/cotrak/new-theme/assets/js/active.js"></script>
+
+
+    <script>
+        $(function() {
+            $('.js-conveyor-1').jConveyorTicker();
+        });
+    </script>
+
+</body>
+
+</html>
